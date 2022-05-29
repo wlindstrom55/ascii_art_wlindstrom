@@ -1,0 +1,54 @@
+#In maven, the target folder represents the build directory. Every temporary file that is generated during the build ends up here.
+target/
+
+#added by me:
+src/main/java/prototypes
+
+src/test/java/prototypes
+
+src/main/webapp
+
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse m2e generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+#maven file for user-specific config in maven. Includes things that should not be distributed w/ the pom.xml
+.settings/
+
+#maven file for classpath
+#.classpath
+
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
