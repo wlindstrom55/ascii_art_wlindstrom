@@ -109,7 +109,6 @@ public class Mvp_ascii_art_Test {
 	
 	@Test
 	public void testCreateAsciiMatrixAndFileWrite() throws Exception {
-	
 		strang = mvp.getAllowedAscii();
 		mvp.loadImage(file);
 		mvp.resizeImage(resizeWidth, resizeHeight);

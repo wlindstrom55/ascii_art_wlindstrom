@@ -20,16 +20,17 @@ public class Mvp_ascii_art {
 //fields
 	//changing these allowedAscii strings inverts the brightness/darkness of the image.
 	//TODO implement a button
-	//private final String allowedAscii = " `^\",:;Il!i~+_-?][}{1)(|\'/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
-	private final String allowedAscii = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\'|()1{}[]?-_+~i!lI;:,\"^` ";
+	private final String allowedAscii1 = " `^\",:;Il!i~+_-?][}{1)(|\'/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
+	private final String allowedAscii2 = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\'|()1{}[]?-_+~i!lI;:,\"^` ";
 	private BufferedImage image;
 	private int[][] bMatrixArray;
-	private int resizeWidth = 320;
-	private int resizeHeight = 320;
+//resizeWidth/Height are normally 320/160/80 TODO
+	private int resizeWidth = 80;
+	private int resizeHeight = 80;
 	
 //some getters to expose class for testing:
 	public String getAllowedAscii() {
-		return allowedAscii;
+		return allowedAscii2;
 	}
 	public BufferedImage getImage() { 
 		return image;
@@ -44,7 +45,6 @@ public class Mvp_ascii_art {
 		return resizeHeight;
 	}
 
-	
 //methods:
 	public void loadImage(File file) throws IOException { 
 			 image = ImageIO.read(file);
@@ -63,7 +63,7 @@ public class Mvp_ascii_art {
 	public int start() throws Exception {
 		resizeImage(resizeWidth, resizeHeight);
 	    createBrightnessMatrix(image, "Average"); 
-	    return createAsciiMatrix(bMatrixArray, allowedAscii);
+	    return createAsciiMatrix(bMatrixArray, allowedAscii2);
 	    }
 	 
 	 public void rotateImage90() {
